@@ -1,0 +1,104 @@
+.main-container.fixed-width
+	.row
+		%h1.span-12
+			12 Column Calc() Responsive Grid
+			%small (Incomplete)
+	.row
+		%p.span-8
+			This is a responsive grid that uses 
+			%code calc()
+			(CSS3 Function) to set the widths of the sections for supporting browsers. 
+			%a{:href => "http://caniuse.com/#feat=calc", :title => "Can I Use Calc() as CSS unit value"} Non-supporting browsers 
+			(Opera, Android Browser, <abbr title="Internet Explorer 8">IE8</abbr> on down) will get a fallback stylesheet (Opera and Android Browser through a Modernizr test or a conditional CSS class "<code>no-csscalc</code>", <abbr title="Internet Explorer 8">IE8</abbr> on down through 
+			%a{:href => "http://css-tricks.com/how-to-create-an-ie-only-stylesheet/", :title => "How To Create an IE-Only Stylesheet"} Conditional Comments
+			) with percentage widths (and <code>DHTML</code> expression widths for <abbr title="Internet Explorer 7">IE7</abbr>).
+.main-container
+	.row
+		.span-12
+			.width-unit
+	.row
+		.span-1
+			.width-unit
+		.span-11
+			.width-unit
+	.row
+		.span-2
+			.width-unit
+		.span-10
+			.width-unit
+	.row
+		.span-3
+			.width-unit
+		.span-9
+			.width-unit
+	.row
+		.span-4
+			.width-unit
+		.span-8
+			.width-unit
+	.row
+		.span-5
+			.width-unit
+		.span-7
+			.width-unit
+	.row
+		.span-6
+			.width-unit
+		.span-6
+			.width-unit
+	.row
+		.span-1.suffix-11
+			.width-unit
+	.row
+		.span-1.prefix-1.suffix-10
+			.width-unit
+	.row
+		.span-1.prefix-2.suffix-9
+			.width-unit
+	.row
+		.span-1.prefix-3.suffix-8
+			.width-unit
+	.row
+		.span-1.prefix-4.suffix-7
+			.width-unit
+	.row
+		.span-1.prefix-5.suffix-6
+			.width-unit
+	.row
+		.span-1.prefix-6.suffix-5
+			.width-unit
+	.row
+		.span-1.prefix-7.suffix-4
+			.width-unit
+	.row
+		.span-1.prefix-8.suffix-3
+			.width-unit
+	.row
+		.span-1.prefix-9.suffix-2
+			.width-unit
+	.row
+		.span-1.prefix-10.suffix-1
+			.width-unit
+	.row
+		.span-1.prefix-11
+			.width-unit
+	.row
+		.span-6
+			.row
+				.span-3
+					.width-unit
+				.span-3
+					.width-unit
+		.span-6
+			.row
+				.span-2
+					.width-unit
+				.span-2
+					.width-unit
+				.span-2
+					.width-unit
+	.underlay
+		.row
+			- (1..12).each do
+				.span-1
+					%div

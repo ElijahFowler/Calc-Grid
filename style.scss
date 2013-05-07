@@ -1,0 +1,146 @@
+/* SCSS Variables */
+$siteWidth: 960px;
+$gutterWidth: 20px;
+$halfGutterWidth: ($gutterWidth/2);
+
+/* Core Grid */
+.main-container {
+    margin: 0 auto;
+    width: $siteWidth;
+}
+.row {
+    clear: both;
+    margin-left: -$halfGutterWidth; /* In this case 10px */
+    width: 100%;
+    .row {
+        margin-left: -$gutterWidth; /* In this case 20px */
+        width: auto; /* In this case 20px */
+    }
+    &:before,
+    &:after {
+        content: "";
+        display: table;
+    }
+    &:after {
+        clear: both;
+    }
+}
+[class*="span-"] { /* I included prefixed versions on box sizing because Prefixer takes a second to load and didn't feel like putting the JS script for the width detection in a document load function */
+    -webkit-box-sizing: border-box;
+       -moz-box-sizing: border-box;
+            box-sizing: border-box;
+    float: left;
+    margin: 0;
+    padding-left: $gutterWidth; /* In this case 20px */
+}
+.span-1  { width: calc(#{$siteWidth} / 12); }
+.span-2  { width: calc(#{$siteWidth} / 12 *  2); }
+.span-3  { width: calc(#{$siteWidth} / 12 *  3); }
+.span-4  { width: calc(#{$siteWidth} / 12 *  4); }
+.span-5  { width: calc(#{$siteWidth} / 12 *  5); }
+.span-6  { width: calc(#{$siteWidth} / 12 *  6); }
+.span-7  { width: calc(#{$siteWidth} / 12 *  7); }
+.span-8  { width: calc(#{$siteWidth} / 12 *  8); }
+.span-9  { width: calc(#{$siteWidth} / 12 *  9); }
+.span-10 { width: calc(#{$siteWidth} / 12 * 10); }
+.span-11 { width: calc(#{$siteWidth} / 12 * 11); }
+.span-12 { width: calc(#{$siteWidth}); }
+
+.suffix-1  { margin-right: calc(#{$siteWidth} / 12 *  1); }
+.suffix-2  { margin-right: calc(#{$siteWidth} / 12 *  2); }
+.suffix-3  { margin-right: calc(#{$siteWidth} / 12 *  3); }
+.suffix-4  { margin-right: calc(#{$siteWidth} / 12 *  4); }
+.suffix-5  { margin-right: calc(#{$siteWidth} / 12 *  5); }
+.suffix-6  { margin-right: calc(#{$siteWidth} / 12 *  6); }
+.suffix-7  { margin-right: calc(#{$siteWidth} / 12 *  7); }
+.suffix-8  { margin-right: calc(#{$siteWidth} / 12 *  8); }
+.suffix-9  { margin-right: calc(#{$siteWidth} / 12 *  9); }
+.suffix-10 { margin-right: calc(#{$siteWidth} / 12 * 10); }
+.suffix-11 { margin-right: calc(#{$siteWidth} / 12 * 11); }
+
+.prefix-1  { margin-left: calc(#{$siteWidth} / 12 *  1); }
+.prefix-2  { margin-left: calc(#{$siteWidth} / 12 *  2); }
+.prefix-3  { margin-left: calc(#{$siteWidth} / 12 *  3); }
+.prefix-4  { margin-left: calc(#{$siteWidth} / 12 *  4); }
+.prefix-5  { margin-left: calc(#{$siteWidth} / 12 *  5); }
+.prefix-6  { margin-left: calc(#{$siteWidth} / 12 *  6); }
+.prefix-7  { margin-left: calc(#{$siteWidth} / 12 *  7); }
+.prefix-8  { margin-left: calc(#{$siteWidth} / 12 *  8); }
+.prefix-9  { margin-left: calc(#{$siteWidth} / 12 *  9); }
+.prefix-10 { margin-left: calc(#{$siteWidth} / 12 * 10); }
+.prefix-11 { margin-left: calc(#{$siteWidth} / 12 * 11); }
+
+[class*="push_"],
+[class*="pull_"] {
+  position: relative;
+}
+.push-1  { left: calc(#{$siteWidth} / 12 *  1); }
+.push-2  { left: calc(#{$siteWidth} / 12 *  2); }
+.push-3  { left: calc(#{$siteWidth} / 12 *  3); }
+.push-4  { left: calc(#{$siteWidth} / 12 *  4); }
+.push-5  { left: calc(#{$siteWidth} / 12 *  5); }
+.push-6  { left: calc(#{$siteWidth} / 12 *  6); }
+.push-7  { left: calc(#{$siteWidth} / 12 *  7); }
+.push-8  { left: calc(#{$siteWidth} / 12 *  8); }
+.push-9  { left: calc(#{$siteWidth} / 12 *  9); }
+.push-10 { left: calc(#{$siteWidth} / 12 * 10); }
+.push-11 { left: calc(#{$siteWidth} / 12 * 11); }
+
+.pull-1  { left: calc(#{$siteWidth} / 12 *  1 * -1); }
+.pull-2  { left: calc(#{$siteWidth} / 12 *  2 * -1); }
+.pull-3  { left: calc(#{$siteWidth} / 12 *  3 * -1); }
+.pull-4  { left: calc(#{$siteWidth} / 12 *  4 * -1); }
+.pull-5  { left: calc(#{$siteWidth} / 12 *  5 * -1); }
+.pull-6  { left: calc(#{$siteWidth} / 12 *  6 * -1); }
+.pull-7  { left: calc(#{$siteWidth} / 12 *  7 * -1); }
+.pull-8  { left: calc(#{$siteWidth} / 12 *  8 * -1); }
+.pull-9  { left: calc(#{$siteWidth} / 12 *  9 * -1); }
+.pull-10 { left: calc(#{$siteWidth} / 12 * 10 * -1); }
+.pull-11 { left: calc(#{$siteWidth} / 12 * 11 * -1); }
+
+
+/* Visual Styling */
+.main-container {
+    box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.4);
+    position: relative;
+}
+.row {
+    margin-bottom: 16px;
+    margin-top: 16px;
+    .row {
+        background-color: transparent;
+        margin-bottom: 0;
+        margin-top: 0;
+    }
+}
+[class*="span-"] .width-unit {
+    background-color: rgba(255, 255, 255, 0.7);
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+}
+
+/* Responsive Underlay Styling */
+.underlay {
+    background-color: green;
+    left: 0;
+    min-height: 100%;
+    position: absolute;
+    top: 0;
+    width: calc(#{$siteWidth});
+    z-index: -1;
+    .row {
+        margin-bottom: 0;
+        margin-top: 0;
+    }
+}
+.underlay [class*="span-"] div {
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+
+/* This for the description at top */
+.main-container.fixed-width {
+    box-shadow: none;
+    width: 980px;
+}
